@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/header,footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/city.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
+
+
+    <script src="js/jquery.min.js"></script>
+
+    <script src="js/fullpage.min.js"></script>
+    <script>
+        $(function () {
+            $('#dowebok').fullpage({
+                navigation: true
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="mhy-account-flow" style="display: none;">
+            <div class="mhy-account-box">
+                <div class="mhy-account-login">
+                    <img src="images/login.png" class="logo">
+                    <img src="images/close.png" class="close-icon">
+                    <script>
+                        $('.close-icon').click(function () {
+                            $('.mhy-account-flow').css('display', 'none')
+                        });
+                    </script>
+                    <div class="tab">
+                        <div class="tab_list">
+                            <ul>
+                                <li class="current">验证码登录</li>
+                                <li>密码登录</li>
+                            </ul>
+                        </div>
+                        <div class="tab_con">
+                            <div class="item yzm" style="display: block;">
+                                <div class="num lobox">
+                                    <input type="text" placeholder="手机号注册/登录">
+                                </div>
+                                <div class="psw lobox">
+                                    <input type="text" placeholder="密码">
+                                </div>
+                                <button class="tab_login_button">登录</button>
+                            </div>
+    
+    
+                            <div class="item mm" style="display: none;">
+    
+                                <div class="number lobox">
+                                    <input type="text" placeholder="输入手机号码">
+                                    <div class="mm_yzm ">获取验证码</div>
+                                </div>
+    
+                                <div class="yzm lobox">
+                                    <input type="text" placeholder="输入验证码">
+                                </div>
+                                <button class="tab_login_button">登录</button>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <script>
+                        $(function () {
+                            // 1.点击上部的li，当前li 添加current类，其余兄弟移除类
+                            $(".tab_list li").click(function () {
+                                // 链式编程操作
+                                $(this).addClass("current").siblings().removeClass("current");
+                                // 2.点击的同时，得到当前li 的索引号
+                                var index = $(this).index();
+                                // console.log(index);
+                                // 3.让下部里面相应索引号的item显示，其余的item隐藏
+                                $(".tab_con .item").eq(index).show().siblings().hide();
+                            })
+                        })
+                    </script>
+    
+                </div>
+            </div>
+        </div>
+
+        <a href="./begin.html">
+            <div class="logo">
+                <div class="music"> <img src="images/music.png" alt=""></div>
+            </div>
+        </a>
+        <ul>
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./xw.html">新闻</a></li>
+            <li><a href="./begin.html">角色</a></li>
+            <li><a href="./city.html">世界</a></li>
+        </ul>
+        <div class="hd_r"><a href="#" class="denglu">登录</a>
+            <script>
+                $('.denglu').click(function () {
+                    $('.mhy-account-flow').css('display', 'block')
+                });
+            </script>
+            <img src="images/user.png" alt="">
+        </div>
+    </header>
+<script src="js/header.js"></script>
+
+
+
+
+
+
+    <div id="dowebok">
+        <div class="section section1">
+            <div class="home">
+                <div class="home_content">
+                    <img src="images/city/twt01.png" alt="">
+                    <img src="images/city/twt02.png" alt="">
+                </div>
+                <div class="home_text">
+                    <p>这里是七种元素交汇的幻想世界「提瓦特」。</p>
+                    <p>在遥远的过去，人们藉由对神灵的信仰，获赐了驱动元素的力量，得以在荒野中筑起家园。</p>
+                    <p>五百年前，古国的覆灭却使得天地变异…</p>
+                    <p>如今，席卷大陆的灾难已经停息，和平却仍未如期光临。</p>
+                </div>
+                <p class="home_link">
+                    前往游记精选
+                </p>
+
+                <div class="home_tip">
+                    <img class="home__tran" src="images/city/twt04.png">
+                </div>
+                <!-- <script>
+                    $(".home_tip").click(function(){
+                        var h=$(window).scrollTop(); //获取当前滚动条距离顶部的位置
+                 $("html,body").animate({ scrollTop: h+($(window).height()) }, 800);//点击按钮向下移动800px，时间为800毫秒
+                });
+                </script> -->
+                <!-- 点击向下滑动页面-- 会有一堆bug目前水平解决不了，放弃 -->
+            </div>
+        </div>
+        <div class="section section2">
+            <div class="home">
+                <div class="home_content">
+                    <img class="city__icon" src="images/city/md01.png" alt="">
+                    <h1 class="city__name">蒙德</h1>
+                </div>
+                <div class="home_text">
+                    <p>位于提瓦特大陆东北部的自由城邦。</p>
+                    <p>
+                        群山和广袤的平原间，自由之风携着蒲公英的气息吹拂过果酒湖，为坐落于湖心岛上的蒙德城送去风神巴巴托斯的祝福与恩泽。</p>
+                    <p>五百年前，古国的覆灭却使得天地变异…</p>
+                </div>
+                <button class="city__detail">
+                    <p>查看详情</p>
+                </button>
+                <script>
+                    $('.city__detail').click(function () {
+                        $('.detail').css('display', ' block');
+                    });
+                </script>
+            </div>
+            <div class="detail">
+                <button class="detail__close">
+
+                </button>
+                <div class="detail__content">
+                    <h1>果酒湖</h1>
+                </hr>
+
+                        <p>环绕蒙德城的天然淡水湖泊。
+                        宽广的湖面和粼粼的波光历经千百年不变，水澈见底，入口清冽甘甜。正是这样的水源成就了蒙德美酒的盛名，也让果酒湖成为了蒙德的重要标志之一。</p>
+                    <img style="" src="images/city/content__detail.jpg" alt="">
+                </div>
+
+                <script>
+                    $('.detail__close').click(function () {
+                        $('.detail').css('display', ' none');
+                    });
+
+                </script>
+
+            </div>
+        </div>
+        <div class="section section3">
+            <h3><div class="home">
+                <div class="home_content">
+                    <img class="city__icon" src="images/city/md01.png" alt="">
+                    <h1 class="city__name">璃玥</h1>
+                </div>
+                <div class="home_text">
+                    <p>位于提瓦特大陆东方的富饶港湾。</p>
+                    <p>
+                        傲然矗立的山麓与石林、广袤的平原与生机勃勃的河滩共同构成了璃月的丰富地貌，在四季分明的气候下焕发出多彩的风华。山石奇景间，又埋藏了多少岩之魔神的古老馈赠等待着人们发掘呢？</p>
+                </div>
+                <button class="city__detail">
+                    <p>查看详情</p>
+                </button>
+                <!-- <script>
+                    $('.city__detail').click(function () {
+                        $('.detail').css('display', ' block');
+                    });
+                </script>
+            </div>
+            <div class="detail">
+                <button class="detail__close">
+
+                </button>
+                <div class="detail__content">
+                    <h1>果酒湖</h1>
+                </hr>
+
+                        <p>环绕蒙德城的天然淡水湖泊。
+                        宽广的湖面和粼粼的波光历经千百年不变，水澈见底，入口清冽甘甜。正是这样的水源成就了蒙德美酒的盛名，也让果酒湖成为了蒙德的重要标志之一。</p>
+                    <img style="" src="images/city/content__detail.jpg" alt="">
+                </div>
+
+                <script>
+                    $('.detail__close').click(function () {
+                        $('.detail').css('display', ' none');
+                    });
+
+                </script> -->
+
+            </div></h3>
+        </div>
+        <div class="section section4">
+            <h3><div class="home">
+                <div class="home_content">
+                    <img class="city__icon" src="images/city/md01.png" alt="">
+                    <h1 class="city__name">稻妻</h1>
+                </div>
+                <div class="home_text">
+                    <p>位于提瓦特大陆远东的封闭群岛。</p>
+                    <p>
+                        越过无尽的雷暴，踏上红枫与绯樱眷顾的诸岛，在环绕的砂堤、高耸的断崖与幽秘的山林之中，见证御建鸣神主尊大御所大人所追寻的永恒。</p>
+                </div>
+                <!-- <button class="city__detail">
+                    <p>查看详情</p>
+                </button>
+                <script>
+                    $('.city__detail').click(function () {
+                        $('.detail').css('display', ' block');
+                    });
+                </script>
+            </div>
+            <div class="detail">
+                <button class="detail__close">
+
+                </button>
+                <div class="detail__content">
+                    <h1>果酒湖</h1>
+                </hr>
+
+                        <p>环绕蒙德城的天然淡水湖泊。
+                        宽广的湖面和粼粼的波光历经千百年不变，水澈见底，入口清冽甘甜。正是这样的水源成就了蒙德美酒的盛名，也让果酒湖成为了蒙德的重要标志之一。</p>
+                    <img style="" src="images/city/content__detail.jpg" alt="">
+                </div>
+
+                <script>
+                    $('.detail__close').click(function () {
+                        $('.detail').css('display', ' none');
+                    });
+
+                </script> -->
+
+            </div></h3>
+        </div>
+        <div class="section section5">
+           <footer class="footer">
+                <ul>
+                    <li class="weibo"></li>
+                    <li class="weix"></li>
+                    <li class="qq"></li>
+                    <li class="share">
+                        <div class="share_nav">
+                            <p>分享至</p>
+                            <ul>
+                                <li class="share_zone"></li>
+                                <li class="share_qq"></li>
+                                <li class="share_weibo"></li>
+                                <li class="share_bbs"></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+        
+        
+                <div class="foot_article">
+                    <div class="foot_mian">
+                        <div class="foot_logo">
+                            <img style="height: 42px;" src="images/mihoyo.png" alt="">
+                            <img style="height: auto; width: 110px;" src="images/genshin.png" alt="">
+                        </div>
+                        <div class="foot_aside">
+        
+                            <a href="#">用户协议</a>
+                            <a href="#">隐私政策</a>
+                            <a href="#">家长监护工程</a>
+                            <a href="#">关于我们</a>
+                            <a href="#">联系我们</a>
+                            <a href="#">加入我们</a>
+                            <br />
+                            <br />
+                            <p> 健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+                            <p>沪公网安备31010402001113号 | 增值电信业务经营许可证：沪B2-20190555</p>
+                            <p> 沪ICP备19018275号-4 | 沪网文〔2019〕3168-216号 | 国新出审【2019】2978号 </p>
+                            <p>互联网违法不良信息举报邮箱: tousu@mihoyo.com 互联网违法不良信息举报电话: 021-34203135 （工作时间：每天10点 - 20点） </p>
+                            <p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听 </p>
+                            <p>© 2020 米哈游版权所有 | 上海米哈游影铁科技有限公司 客服电话：86-021-34203305
+                            </p>
+                            <br />
+                            <img src="images/shiming_1575020038_4113.png" alt="">
+                            <img src="images/jubao_1575020039_5071.png" alt="">
+                            <img src="images/youhai_1589857356_1416.png" alt="">
+                            <img src="images/culture_1575020039_5478.png" alt="">
+                            <img src="images/e110_1575020039_7486.png" alt="">
+                            <img src="images/zhizhao_1575020039_4362.png" alt="">
+        
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

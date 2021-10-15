@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原神</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.(new)min.css">
+    <link rel="stylesheet" href="css/header,footer.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <script src="./js/index.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper-bundle.min(new).js"></script>
+    <script>
+        //tab
+        $(function () {
+            $(".news_nav li").click(function () {
+                $(this).addClass("current").siblings().removeClass("current");
+                var index = $(this).index();
+                // console.log(index);
+                $(".news_list .item").eq(index).show().siblings().hide();
+            })
+        });
+
+    </script>
+    <div class="gd">
+        <div class="gd_ball"></div>
+    </div>
+    <div class="fd_box"><img src="images/fd.png" alt="">
+        <button class="fd"></button>
+    </div>
+    <div class="mhy-account-flow" style="display: none;">
+        <div class="mhy-account-box">
+            <div class="mhy-account-login">
+                <img src="images/login.png" class="logo">
+                <img src="images/close.png" class="close-icon">
+                <script>
+                    $('.close-icon').click(function () {
+                        $('.mhy-account-flow').css('display', 'none')
+                    });
+                </script>
+                <div class="tab">
+                    <div class="tab_list">
+                        <ul>
+                            <li class="current">验证码登录</li>
+                            <li>密码登录</li>
+                        </ul>
+                    </div>
+                    <div class="tab_con">
+                        <div class="item yzm" style="display: block;">
+                            <div class="num lobox">
+                                <input type="text" placeholder="手机号注册/登录">
+                            </div>
+                            <div class="psw lobox">
+                                <input type="text" placeholder="密码">
+                            </div>
+                            <button class="tab_login_button">登录</button>
+                        </div>
+
+
+                        <div class="item mm" style="display: none;">
+
+                            <div class="number lobox">
+                                <input type="text" placeholder="输入手机号码">
+                                <div class="mm_yzm ">获取验证码</div>
+                            </div>
+
+                            <div class="yzm lobox">
+                                <input type="text" placeholder="输入验证码">
+                            </div>
+                            <button class="tab_login_button">登录</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <script>
+                    $(function () {
+                        // 1.点击上部的li，当前li 添加current类，其余兄弟移除类
+                        $(".tab_list li").click(function () {
+                            // 链式编程操作
+                            $(this).addClass("current").siblings().removeClass("current");
+                            // 2.点击的同时，得到当前li 的索引号
+                            var index = $(this).index();
+                            // console.log(index);
+                            // 3.让下部里面相应索引号的item显示，其余的item隐藏
+                            $(".tab_con .item").eq(index).show().siblings().hide();
+                        })
+                    })
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <a href="./begin.html">
+            <div class="logo">
+                <div class="music"> <img src="images/music.png" alt=""></div>
+            </div>
+        </a>
+        <ul>
+            <li><a href="./index.html">首页</a></li>
+            <li><a href="./xw.html">新闻</a></li>
+            <li><a href="./begin.html">角色</a></li>
+            <li><a href="./city.html">世界</a></li>
+        </ul>
+        <div class="hd_r"><a href="#" class="denglu">登录</a>
+            <script>
+                $('.denglu').click(function () {
+                    $('.mhy-account-flow').css('display', 'block')
+                });
+            </script>
+            <img src="images/user.png" alt="">
+        </div>
+    </header>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).bind('scroll', function () {
+                if ($(window).scrollTop() > 0) {
+                    $('header').addClass('fixed');
+                }
+                else {
+                    console.log($(window).height())
+                    console.log($(window).scrollTop())
+                    $('header').removeClass('fixed');
+                }
+            });
+        });
+    </script>
+
+
+
+
+    <div class="bg_warp">
+        <video autoplay="autoplay" src="video/3e78e80.mp4" poster="images/47f71d4.jpg" muted="muted" loop="loop"
+            style="opacity: 1; width: 100%; height: 900px; object-fit:fill;"></video>
+        <div class="video_c">
+            <div class="video_change"></div>
+        </div>
+        <!-- video end -->
+        <div class="box-download">
+            <div class="ewm"><img src="images/erweima.png" alt="">
+                <div class="paimon"><img src="images/paimon.jpg" alt=""></div>
+            </div>
+            <div class="down_pc">
+                <img src="images/ps.png" alt="">
+                <img src="images/tap.png" alt="">
+                <img src="images/apple.png" alt="">
+                <img src="images/andio.png" alt="">
+
+            </div> <img src="images/pc.png" alt="">
+        </div>
+        <div class="age"><img src="images/age.png" alt=""></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 第二幕 -->
+
+    <section class="news">
+        <h3>新闻资讯</h3>
+        <div class="news_main">
+            <div class="lunbo">
+                <!-- <div class="lunbo_box"> -->
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"> <img src="images/news1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/news2.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/news3.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="images/2021101118060152304.jpg" alt=""></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- </div> -->
+            </div>
+
+
+
+
+
+
+
+            <!-- <section class="news">
+        <h3>新闻资讯</h3>
+        <div class="news_main">
+            <div class="lunbo">
+                <div class="lunbo_box">
+                    <ul>
+                        <li>
+                            <img src="images/news1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/news2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/news3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/news2.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/news1.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    -->
+
+
+
+
+
+
+
+
+            <div class="news_content">
+                <div class="news_nav">
+                    <ul>
+                        <li class="current">最新</li>
+                        <li>新闻</li>
+                        <li>公告</li>
+                        <li>活动</li>
+                    </ul>
+                </div>
+                <div class="news_list">
+                    <div class="item" style="display: block;">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>锵锵领兵行</p>
+                                    <p>2021/10/11</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>花坂之鬼，豪情快意</p>
+                                    <p>2021/10/11</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》「雾海悬谜境」2.2版本活动速递第一期</p>
+                                    <p>2021/10/11</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《云·原神》安卓公测即将开启，购买珍珠之歌赠送「30日畅玩卡」</p>
+                                    <p>2021/10/11</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》「雾海悬谜境」2.2版本活动说明</p>
+                                    <p>2021/10/11</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶213123光抚月，天下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶光抚月，天123123下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶光抚月，天下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶光抚月，天下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶光抚月，天下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                    <div class="item">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶213123光抚月，天下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶光抚月，天123123下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶光抚月，天下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶光抚月，天下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》2.1版本「韶光抚月，天下人间」前瞻特别节目回顾长图</p>
+                                    <p>2021/08/20</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                    <div class="item">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <p>「岩港奇珍行记」网页活动说明</p>
+                                    <p>2020/11/02</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>《原神》月夕祝颂-万份空月祝福相赠</p>
+                                    <p>2020/10/01</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>“在尘世的相逢”抖音《原神》公测主播招募</p>
+                                    <p>2020/09/28</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>“在尘世的相逢”快手直播《原神》主播招募活动开启</p>
+                                    <p>2020/09/28</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>“在尘世的相逢”斗鱼直播《原神》主播招募活动开启</p>
+                                    <p>2020/09/28</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="./js/swiper-bundle.min(new).js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+        });
+    </script>
+
+    </script>
+    <section class="city">
+        <ul>
+            <li>
+                <div class="city_bg" style="background: url(images/mengde.jpg);"></div>
+                <a href="#">
+                    <p>蒙德城</p>
+                </a>
+                <div class="city_pp" style="background-image: url(images/md1.png);"></div>
+            </li>
+            <li>
+                <div class="city_bg" style="background: url(images/liyue.jpg);"></div>
+                <a href="#">
+                    <p>璃月港</p>
+                </a>
+                <div class="city_pp" style="background-image: url(images/xiao.png);"></div>
+            </li>
+            <li>
+                <div class="city_bg" style="background: url(images/daoqi.jpg);"></div>
+                <a href="#">
+                    <p>蒙德城</p>
+                </a>
+                <div class="city_pp" style="background-image: url(images/shenli.png);"></div>
+            </li>
+            <li>
+                <div class="city_bg" style="background: url(images/wait.jpg);"></div>
+                <a href="#">
+                    <p>敬请期待</p>
+                </a>
+                <div class="city_pp"></div>
+            </li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <ul>
+            <li class="weibo"></li>
+            <li class="weix"></li>
+            <li class="qq"></li>
+            <li class="share">
+                <div class="share_nav">
+                    <p>分享至</p>
+                    <ul>
+                        <li class="share_zone"></li>
+                        <li class="share_qq"></li>
+                        <li class="share_weibo"></li>
+                        <li class="share_bbs"></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+
+        <div class="foot_article">
+            <div class="foot_mian">
+                <div class="foot_logo">
+                    <img style="height: 42px;" src="images/mihoyo.png" alt="">
+                    <img style="height: auto; width: 110px;" src="images/genshin.png" alt="">
+                </div>
+                <div class="foot_aside">
+
+                    <a href="#">用户协议</a>
+                    <a href="#">隐私政策</a>
+                    <a href="#">家长监护工程</a>
+                    <a href="#">关于我们</a>
+                    <a href="#">联系我们</a>
+                    <a href="#">加入我们</a>
+                    <br />
+                    <br />
+                    <p> 健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+                    <p>沪公网安备31010402001113号 | 增值电信业务经营许可证：沪B2-20190555</p>
+                    <p> 沪ICP备19018275号-4 | 沪网文〔2019〕3168-216号 | 国新出审【2019】2978号 </p>
+                    <p>互联网违法不良信息举报邮箱: tousu@mihoyo.com 互联网违法不良信息举报电话: 021-34203135 （工作时间：每天10点 - 20点） </p>
+                    <p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听 </p>
+                    <p>© 2020 米哈游版权所有 | 上海米哈游影铁科技有限公司 客服电话：86-021-34203305
+                    </p>
+                    <br />
+                    <img src="images/shiming_1575020038_4113.png" alt="">
+                    <img src="images/jubao_1575020039_5071.png" alt="">
+                    <img src="images/youhai_1589857356_1416.png" alt="">
+                    <img src="images/culture_1575020039_5478.png" alt="">
+                    <img src="images/e110_1575020039_7486.png" alt="">
+                    <img src="images/zhizhao_1575020039_4362.png" alt="">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

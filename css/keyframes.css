@@ -1,0 +1,82 @@
+                    @keyframes move {
+                        0% {
+                            transform: translateX(0px);
+                        }
+                        12% {
+                            transform: translateX(-640px);
+                        }
+                        24% {
+                            transform: translateX(-640px);
+                        }
+                        36% {
+                            transform: translateX(-1280px);
+                        }
+                        48% {
+                            transform: translateX(-1280px);
+                        }
+                        60% {
+                            transform: translateX(-1920px);
+                        }
+                        72% {
+                            transform: translateX(-1920px);
+                        }
+                        84% {
+                            transform: translateX(-2560px);
+                        }
+                        96% {
+                            transform: translateX(-2560px);
+                        }
+                        100% {
+                            transform: translateX(-2560px);
+                        }
+                    }
+                    
+                    @keyframes pp {
+                        0% {}
+                        100% {
+                            transform: translateX(-300px);
+                            opacity: 1;
+                        }
+                    }
+                    
+                    @keyframes gd1 {
+                        0% {}
+                        48% {
+                            opacity: 1;
+                        }
+                        80% {
+                            opacity: 0;
+                            z-index: 0;
+                        }
+                        100% {
+                            opacity: 0;
+                            z-index: 0;
+                        }
+                    }
+                    
+                    @keyframes gd2 {
+                        0% {}
+                        10% {
+                            transform: translateY(50%) scaleY(1);
+                        }
+                        12% {
+                            transform: translateY(46%);
+                        }
+                        14% {
+                            transform: translateY(50%) scaleY(.8);
+                        }
+                        16% {
+                            transform: translateY(48%);
+                        }
+                        18% {
+                            transform: translateY(50%) scaleY(1);
+                        }
+                        95% {
+                            opacity: 1;
+                            z-index: 0;
+                        }
+                        100% {
+                            transform: translateY(-50%);
+                            z-index: 0;
+                        }
+                    }
